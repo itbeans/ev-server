@@ -67,6 +67,7 @@ export interface LogDataResult extends DataResult<Log> {
 
 export interface SiteAreaDataResult extends DataResult<SiteArea> {
   canCreate: boolean;
+  smartChargingSessionParametersActive: boolean;
 }
 
 export interface CarDataResult extends DataResult<Car> {
@@ -189,4 +190,12 @@ export interface OcpiEndpointDataResult extends DataResult<OCPIEndpoint> {
   canCreate?: boolean;
   canPing?: boolean;
   canGenerateLocalToken?: boolean;
+}
+
+export interface StatisticDataResult extends DataResult<any> {
+  canListUsers?: boolean;
+  canListChargingStations?: boolean;
+  canListSites?: boolean;
+  canListSiteAreas?: boolean;
+  canExport?: boolean;
 }

@@ -286,6 +286,7 @@ export enum ServerAction {
   CHARGING_STATION_REGISTERED = 'ChargingStationRegistered',
   END_OF_CHARGE = 'EndOfCharge',
   OPTIMAL_CHARGE_REACHED = 'OptimalChargeReached',
+  SESSION_STARTED = 'SessionStarted',
   END_OF_SESSION = 'EndOfSession',
   REQUEST_PASSWORD = 'RequestPassword',
   USER_ACCOUNT_STATUS_CHANGED = 'UserAccountStatusChanged',
@@ -494,7 +495,9 @@ export enum ServerAction {
   HTTP_RESPONSE = 'HttpResponse',
   HTTP_ERROR = 'HttpError',
 
-  EXPORT_TO_CSV = 'ExportToCSV'
+  EXPORT_TO_CSV = 'ExportToCSV',
+  SHIELD ='Shield',
+  RATE_LIMITER = 'RateLimiter'
 }
 
 // RESTful API
@@ -704,6 +707,7 @@ export enum RESTServerRoute {
 
   REST_BILLING_SETTING = 'billing-setting', // GET and PUT
   REST_BILLING_CHECK = 'billing/check',
+  REST_BILLING_USER_SYNCHRONIZE = 'billing/users/:id/synchronize',
   REST_BILLING_CLEAR_TEST_DATA = 'billing/clearTestData',
 
   REST_BILLING_TAXES = 'billing/taxes',
